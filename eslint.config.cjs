@@ -10,6 +10,7 @@ module.exports = defineConfig([
          parser: tsParser,
          parserOptions: { project: "tsconfig.json", ecmaVersion: "latest", sourceType: "module" }
       },
+      env: { "browser": true },
       plugins: { js: js, "@typescript-eslint": tsPlugin },
       extends: ["js/recommended", "@typescript-eslint/recommended"]
    },
