@@ -9,10 +9,7 @@ module.exports = defineConfig([
       files: ["**/*.js", "**/*.ts"],
       languageOptions: {
          parser: tsParser,
-         parserOptions: { project: "tsconfig.json", ecmaVersion: "latest", sourceType: "module" },
-         globals: {
-            ...globals.browser
-         }
+         parserOptions: { project: "tsconfig.json", ecmaVersion: "latest", sourceType: "module" }
       },
       plugins: { js: js, "@typescript-eslint": tsPlugin },
       extends: ["js/recommended", "@typescript-eslint/recommended"]
@@ -20,7 +17,6 @@ module.exports = defineConfig([
    {
       rules: {
          "no-unused-vars": "off", // prefer ts
-         "no-undef": "warn"
       }
    }
 ]);

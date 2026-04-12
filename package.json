@@ -14,7 +14,8 @@
    "scripts": {
       "lint": "eslint \"src/**/*.{js,ts}\" --max-warnings=0",
       "build": "tsc -p tsconfig.json",
-      "test": "jest --passWithNoTests"
+      "test": "jest --passWithNoTests",
+      "dev:run": "ts-node src/scripts/run-detect.ts"
    },
    "repository": {
       "type": "git",
@@ -45,6 +46,8 @@
    },
    "dependencies": {
       "@techstark/opencv-js": "^4.12.0-release.1",
-      "globals": "^17.4.0"
+      "dommatrix": "^0.1.1",
+      "globals": "^17.4.0",
+      "mirada": "^0.0.15"
    }
 }
