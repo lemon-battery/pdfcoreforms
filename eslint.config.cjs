@@ -2,6 +2,7 @@ const { defineConfig } = require("eslint/config");
 const js = require("@eslint/js");
 const tsPlugin = require("@typescript-eslint/eslint-plugin");
 const tsParser = require("@typescript-eslint/parser");
+const globals = require("globals");
 
 module.exports = defineConfig([
    {
@@ -15,8 +16,7 @@ module.exports = defineConfig([
    },
    {
       rules: {
-         "no-unused-vars": "warn",
-         "no-undef": "warn"
+         "no-unused-vars": "off", // prefer ts
       }
    }
 ]);
